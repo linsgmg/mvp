@@ -1,4 +1,4 @@
-package com.lin.mvp.simple04.base02;
+package com.lin.mvp.simple04.base04;
 
 
 /**
@@ -6,7 +6,7 @@ package com.lin.mvp.simple04.base02;
  * 创建日期：2019/5/28 16
  * 描述：BasePresenter03
  */
-public abstract class BasePresenter04<T extends BaseView> {
+public abstract class BasePresenter04<T extends BaseView04> {
 
     private T View;
 

@@ -1,6 +1,7 @@
 package com.lin.mvp;
 
 import android.os.Looper;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,9 @@ import com.lin.mvp.simple03.LoginPresenter03;
 import com.lin.mvp.simple03.LoginView03;
 import com.lin.mvp.simple04.LoginPresenter04;
 import com.lin.mvp.simple04.LoginView04;
+import com.lin.mvp.simple05.LoginPresenter05;
+import com.lin.mvp.simple05.LoginView05;
+import com.lin.mvp.simple05.base05.BaseActivity;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -27,8 +31,9 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class MainActivity extends AppCompatActivity implements LoginView04 {
-
+//public class MainActivity extends BaseActivity<LoginView05, LoginPresenter05> implements LoginView05 {
+public class MainActivity extends FragmentActivity {
+//mvp 第六阶段
 
     private LoginPresenter02 loginPresenter02;
     private LoginPresenter03 loginPresenter03;
@@ -118,30 +123,64 @@ public class MainActivity extends AppCompatActivity implements LoginView04 {
 //    }
 
     //mvp 第四阶段
-    public void login(View view) {
-        loginPresenter04 = new LoginPresenter04();
-        loginPresenter04.attachView(this);
-        loginPresenter04.login("lin", "123");
-    }
+//    public void login(View view) {
+//        loginPresenter04 = new LoginPresenter04();
+//        loginPresenter04.attachView(this);
+//        loginPresenter04.login("lin", "123");
+//    }
+//
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        if (loginPresenter04 != null) {
+//            loginPresenter04.detachView();
+//        }
+//    }
+//
+//    @Override
+//    public void onLoginCallbackFail(Call call, IOException e) {
+//        Log.d("---------lin---------", "onLoginCallbackFail");
+//    }
+//
+//    @Override
+//    public void onLoginCallbackSuccess(Call call, String response) {
+//        Log.d("---------lin---------", "onLoginCallbackSuccess : " + response);
+//        Looper.prepare();
+//        Toast.makeText(this, response, Toast.LENGTH_SHORT).show();
+//        Looper.loop();
+//    }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (loginPresenter04 != null) {
-            loginPresenter04.detachView();
-        }
-    }
-
-    @Override
-    public void onLoginCallbackFail(Call call, IOException e) {
-        Log.d("---------lin---------", "onLoginCallbackFail");
-    }
-
-    @Override
-    public void onLoginCallbackSuccess(Call call, String response) {
-        Log.d("---------lin---------", "onLoginCallbackSuccess : " + response);
-        Looper.prepare();
-        Toast.makeText(this, response, Toast.LENGTH_SHORT).show();
-        Looper.loop();
-    }
+    //mvp 第五阶段
+//    public void login(View view) {
+//        getPresenter().login("lin", "123");
+//    }
+//
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        Toast.makeText(this, "222", Toast.LENGTH_SHORT).show();
+//    }
+//
+//    @Override
+//    public LoginPresenter05 createPresenter() {
+//        return new LoginPresenter05();
+//    }
+//
+//    @Override
+//    public LoginView05 createView() {
+//        return this;
+//    }
+//
+//    @Override
+//    public void onLoginCallbackFail(Call call, IOException e) {
+//        Log.d("---------lin---------", "onLoginCallbackFail");
+//    }
+//
+//    @Override
+//    public void onLoginCallbackSuccess(Call call, String response) {
+//        Log.d("---------lin---------", "onLoginCallbackSuccess : " + response);
+//        Looper.prepare();
+//        Toast.makeText(this, response, Toast.LENGTH_SHORT).show();
+//        Looper.loop();
+//    }
 }

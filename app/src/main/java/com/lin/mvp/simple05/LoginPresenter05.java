@@ -1,7 +1,10 @@
-package com.lin.mvp.simple04;
+package com.lin.mvp.simple05;
 
 
+import com.lin.mvp.simple04.LoginModule04;
+import com.lin.mvp.simple04.LoginView04;
 import com.lin.mvp.simple04.base04.BasePresenter04;
+import com.lin.mvp.simple05.base05.BasePresenter05;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -20,12 +23,12 @@ import okhttp3.Response;
 //特点一 :持有M层引用
 //特点一 :持有V层引用
 //特点一 :对M层和V层进行关联
-public class LoginPresenter04 extends BasePresenter04<LoginView04> {
+public class LoginPresenter05 extends BasePresenter05<LoginView05> {
 
-    private LoginModule04 loginModule;
+    private LoginModule05 loginModule;
 
-    public LoginPresenter04() {
-        this.loginModule = new LoginModule04();
+    public LoginPresenter05() {
+        this.loginModule = new LoginModule05();
     }
 
 

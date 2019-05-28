@@ -1,6 +1,6 @@
-package com.lin.mvp.simple04;
+package com.lin.mvp.simple05;
 
-import com.lin.mvp.simple04.base04.BaseView04;
+import com.lin.mvp.simple05.base05.BaseView05;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ import okhttp3.Call;
  */
 
 //UI层回调接口
-public interface LoginView04 extends BaseView04 {
+public interface LoginView05 extends BaseView05 {
     void onLoginCallbackFail(Call call, IOException e);
     void onLoginCallbackSuccess(Call call, String response);
 }

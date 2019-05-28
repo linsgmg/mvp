@@ -1,4 +1,4 @@
-package com.lin.mvp.simple04;
+package com.lin.mvp.simple05;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ import okhttp3.Response;
  * 创建日期：2019/5/28 15
  * 描述：LoginModule
  */
-public class LoginModule04 {
+public class LoginModule05 {
 //    public static final String URL_LOGIN = "http://192.168.10.210:3000/users";
     public static final String URL_LOGIN = "http://www.baidu.com";
 
